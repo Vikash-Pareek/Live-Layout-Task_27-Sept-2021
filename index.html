@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/9832e95fe7.js" crossorigin="anonymous"></script>
+
+    <title>Assessment - Live Layout Test</title>
+</head>
+<body>
+    
+    <main>
+
+        <section id="slide-navbar">
+            <div class="slide-navbar-links">
+                <a href="#">Sign In</a>
+                <a href="#">Sign In</a>
+                <a href="#">
+                    <img src="./asset/right-logo.png" alt="right-logo" />
+                </a>
+                <button class="close-slide-bar-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </section>
+
+        <nav id="navigation-bar">
+            <a href="#">
+                <img src="./asset/logo.png" alt="logo" />
+            </a>
+            <div class="navbar-right-content">
+                <div class="nav-links">
+                    <a href="#">Sign In</a>
+                    &ensp;|&ensp;
+                    <a href="#">Sign Up</a>
+                </div>
+                <a href="#">
+                    <img src="./asset/right-logo.png" alt="right-logo" />
+                </a>
+            </div>
+            <div class="navbar-hamburger">
+                <a href="#"><i class="fas fa-bars"></i></a>
+            </div>
+        </nav>
+
+        <section id="assessment-section">
+            <div class="assessment-content">
+                <p>
+                    Take the kidoscope<br />phisocmetic assessment<br />& spot the early signs.
+                </p>
+                <button class="free-test-btn">Take a Quick Free Test</button>
+            </div>
+            <form class="reach-out-form">
+                <h3>Interested? Connect With Us!</h3>
+                <p>Guaranteed response within 12 hours</p>
+                <input type="text" placeholder="Name" required />
+                <input type="email" placeholder="Email" required />
+                <input type="tel" placeholder="Phone" required />
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <article id="customer-review-section">
+            <div class="review-title">
+                <div class="review-icon">
+                    <img src="./asset/icon.png" alt="review-icon" />
+                </div>
+                <h1>What our happy<br />customers are saying.</h1>
+            </div>
+            <div class="customer-reviews">
+                <div class="single-customer-review-one">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim asperiores, non vel dicta nulla ullam quis blanditiis, ipsam est assumenda, nostrum nemo placeat fuga dolorum odio magnam animi doloremque!</p>
+                    <div class="customer-quote">
+                        <div class="customer-img">
+                            <img src="./asset/icon1.jpg" alt="customer-1" />
+                        </div>
+                        <p>&ensp;-&ensp;Aditi Rao</p>
+                    </div>
+                </div>
+                <div class="single-customer-review-two">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim asperiores, non vel dicta nulla ullam quis blanditiis, ipsam est assumenda, nostrum nemo placeat fuga dolorum odio magnam animi doloremque!</p>
+                    <div class="customer-quote">
+                        <div class="customer-img">
+                            <img src="./asset/icon2.jpg" alt="customer-1" />
+                        </div>
+                        <p>&ensp;-&ensp;Sumit Mehta</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script>
+        // Click functionality for the hamburger icon menu
+        $(document).ready(function () {
+            $('#slide-navbar').css('display', 'none');
+            $('.navbar-hamburger, .close-slide-bar-btn').click(() => {
+                $('#slide-navbar').animate({
+                width: "toggle"
+            });
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+@font-face {
+    font-family: 'Poppins-600';
+    src: local('Poppins-SemiBold.ttf'), 
+        url('./font/Poppins-SemiBold.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins-600';
+}
+
+a {
+    text-decoration: none;
+}
+
+#navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    background-color: #ffd60a;
+}
+
+.navbar-right-content {
+    display: flex;
+    align-items: center;
+    width: 20rem;
+    justify-content: space-between;
+}
+
+.nav-links {
+    color: darkgrey;
+}
+
+.nav-links a {
+    color: grey;
+}
+
+.navbar-hamburger, #slide-navbar, .slide-navbar-links {
+    display: none;
+}
+
+.close-slide-bar-btn {
+    background-color: tomato;
+    border: none;
+    color: #fff;
+    padding: 0.5rem;
+    width: 3rem;
+    cursor: pointer;
+}
+
+#assessment-section {
+    background-image: linear-gradient(rgba(148, 235, 250, 0.5), rgba(170, 245, 245, 0.5)), url("./asset/background-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    /* background-position-y: -25rem; */
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.assessment-content {
+    margin: 3rem;
+    height: 15rem;
+}
+
+.assessment-content p {
+    margin: 0;
+    font-size: 2rem;
+    color: steelblue;
+}
+
+.free-test-btn {
+    background-color: #d90368;
+    color: #fff;
+    padding: 1.2rem 3rem;
+    border: 2px solid #d90368;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.free-test-btn:hover {
+    background-color: transparent;
+    color: #d90368;
+}
+
+.free-test-btn:active, .reach-out-form button:active {
+    transform: translateY(2px);
+}
+
+.reach-out-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 2rem;
+    height: 15.5rem;
+    box-shadow: 2px 2px 10px #888888;
+}
+
+.reach-out-form h3, p {
+    margin: 0;
+}
+
+.reach-out-form h3 {
+    color: grey;
+}
+
+.reach-out-form p {
+    font-size: 0.8rem;
+    color: chocolate;
+    margin-bottom: 1rem;
+}
+
+.reach-out-form input {
+    width: 100%;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+.reach-out-form input:focus {
+    outline: none;
+}
+
+.reach-out-form button {
+    background-color: green;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 3rem;
+    border: 1px solid green;
+    cursor: pointer;
+}
+
+#customer-review-section {
+    background-color: blue;
+    color: #fff;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.review-title {
+    margin: 0 0 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-title h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.review-icon {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.customer-reviews {
+    display: flex;
+    width: 55vw;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.single-customer-review-one, .single-customer-review-two {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+}
+
+.single-customer-review-one p, .single-customer-review-two p {
+    font-size: 0.85rem;
+}
+
+.customer-quote {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.customer-quote p {
+    text-transform: uppercase;
+}
+
+.customer-img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+@media (max-width: 1126px) {
+    #customer-review-section {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .review-title {
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .customer-reviews {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 939px) {
+    #assessment-section {
+        height: auto;
+        justify-content: center;
+    }
+
+    .assessment-content {
+        text-align: center;
+    }
+
+    .customer-reviews {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 601px) {
+    .navbar-right-content {
+        display: none;
+    }
+
+    .navbar-hamburger {
+        display: flex;
+    }
+
+    #slide-navbar {
+        height: 100vh;
+        width: 50vw;
+        background-color: snow;
+        position: fixed;
+        right: 0;
+        padding: 2rem;
+    }
+
+    .slide-navbar-links {
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+        justify-content: space-between;
+    }
+
+    .navbar-hamburger a, .slide-navbar-links a {
+        color: grey;
+    }
+
+    .assessment-content, .reach-out-form {
+        height: auto;
+    }
+
+    .assessment-content p {
+        font-size: 1.8rem;
+    }
+
+    #navigation-bar {
+        padding: 1rem 2rem;
+    }
+
+    #assessment-section, #customer-review-section {
+        padding: 2rem;
+    }
+
+    .customer-reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .single-customer-review-one, .single-customer-review-two {
+        width: 100%;
+    }
+
+    .single-customer-review-one {
+        margin-bottom: 2rem;
+    }
+}
